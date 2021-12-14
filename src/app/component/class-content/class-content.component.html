@@ -1,0 +1,82 @@
+
+  <section class="py-5 container" *ngIf="show" id="clase">
+
+    <div class="row py-lg-5">
+      <div class="col-lg-12 mx-auto">
+        <span class="btn btn-link" onclick="showClasses()">Ver clases</span>
+        <div class="card shadow-sm mb-3">
+          <div class="card-img-top w-full c-full p-5" style="background-image: url(assets/img/backgrounds/img_bookclub.jpg);">
+            <span class="h3 text-white">{{clase.nombreClase}}</span><br>
+            <span class="small text-white">{{clase.seccion}}</span>
+          </div>
+          <div class="card-body">
+            <p class="card-text">
+              <span class="text-dark">Descripción: {{clase.descripcion}}</span><br>
+              <span class="small text-muted">Aula: {{clase.aula}}</span>
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Por evaluar -->
+          <div class="col-3">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                  <div class="card-text">
+
+                  <span class="text-dark">Por evaluar</span><br>
+                  <hr>
+                  <ul>
+                    <li><span class="small text-muted" *ngFor="let tarea of clase.asignaciones">{{tarea.titulo}} ({{tarea.fecha}})</span></li>
+                  </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-9">
+            <!-- Compartir con la clase -->
+            <div class="card shadow-sm mb-3">
+              <div class="card-body">
+                <p class="card-text">
+
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <img src="assets/img/profile-pics/goku.jpg" class="rounded-circle pp-small">
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" name="" id="" placeholder="Anunciar algo a tu clase">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Send</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Comentarios Instructor -->
+            <div class="card shadow-sm mb-3">
+              <div class="card-body">
+                <p class="card-text">
+                  <img src="assets/img/profile-pics/goku.jpg" class="rounded-circle pp">
+                  <span class="h6">Goku</span>
+                  <span class="small text-muted">06:00pm</span>
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam qui beatae eveniet a assumenda possimus voluptatibus veritatis molestias laudantium aliquam porro, recusandae ea commodi voluptatum explicabo ad quo nostrum corrupti culpa. Eum expedita nobis iure nisi obcaecati alias facere natus velit magni tempora dolor, atque deserunt et rem nulla excepturi!
+                </p>
+                <hr>
+                <!-- Respuestas -->
+                <div class="ms-4">
+                  <p class="text-muted">
+                    <span class="h6">Gohan </span><span class="small text-muted">(12:00)</span> : Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, laborum.
+                  </p>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" name="" id="" placeholder="Nuevo comentario">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Send</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div></div>
+  </section>

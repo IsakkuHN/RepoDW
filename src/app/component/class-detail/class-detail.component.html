@@ -1,0 +1,29 @@
+
+  <div class="album py-5 bg-light" style="display: block;" id="clases" *ngIf="show">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col" *ngFor="let class of classes">
+          <div class="card shadow-sm">
+            <div class="card-img-top w-full course-top p-2" style="background-image: url(../../../assets/assets/img/backgrounds/img_read.jpg);">
+              <span class="h3 text-white">{{class['nombreClase']}}</span><br>
+              <span class="small text-white">{{class['seccion']}}</span>
+            </div>
+            <div class="card-body">
+              <p class="card-text">
+                <span class="text-dark">{{class['asignaciones'][0]['titulo']}}</span><br>
+                <span class="small text-muted">{{class['asignaciones'][0]['fecha']}}</span>
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" (click)="verClaseDetalles(class['_id'])" class="btn btn-sm btn-outline-secondary">Ver</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,8 @@
+ <!-- Miniaturas de clases -->
+ <div class="col-2 py-4" *ngFor="let clase of clases" >
+  <div class="card">
+    <div class="card-body course-thumb" (click)="mostrarClase(clase['_id'])"  style="background-image: url({{clase}});">
+      <h5 class="text-black">{{clase['nombreClase']}}</h5>
+    </div>
+  </div>
+</div>
